@@ -1,5 +1,4 @@
 import useCopy from 'src/state/copy';
-import { Link } from 'react-router-dom';
 import { customStyled } from 'src/assets/utils/stitches';
 
 const HomePageStyle = customStyled('div', {
@@ -34,33 +33,6 @@ const HomePageStyle = customStyled('div', {
     '@md': { fontSize: 20 },
   },
 
-  '.home-links-container': {
-    display: 'flex',
-    gap: 10,
-
-    a: {
-      fontSize: 16,
-    },
-
-    '.home-link-about': {
-      backgroundColor: 'rgb(16, 16, 16)',
-      color: 'rgb(250, 250, 250)',
-
-      '&:hover': {
-        color: 'rgb(16, 16, 16)',
-        backgroundColor: 'var(--accent-color)',
-      },
-    },
-
-    '.home-link-projects': {
-      border: '2px solid gray',
-
-      '&:hover': {
-        border: '2px solid var(--accent-color)',
-      },
-    },
-  },
-
   a: {
     textDecoration: 'none',
     padding: '5px 10px',
@@ -69,8 +41,7 @@ const HomePageStyle = customStyled('div', {
 });
 
 export default function Home(): JSX.Element {
-  const { heroTitle, heroDescription, homeButtonAbout, linkProjects } =
-    useCopy();
+  const { heroTitle, heroDescription } = useCopy();
   return (
     <HomePageStyle>
       <section className="hero-title">
@@ -81,14 +52,6 @@ export default function Home(): JSX.Element {
           {heroDescription.map((sentence) => (
             <p key={sentence.substring(0, 5)}>{sentence}</p>
           ))}
-        </div>
-        <div className="home-links-container">
-          <Link to="/about" className="home-link-about">
-            {homeButtonAbout}
-          </Link>
-          <Link to="/projects" className="home-link-projects">
-            {linkProjects}
-          </Link>
         </div>
       </section>
     </HomePageStyle>

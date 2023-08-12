@@ -1,5 +1,4 @@
 import { useAtomValue } from 'jotai';
-import { generateLorem } from 'src/assets/utils';
 import { siteLanguageAtom } from '.';
 
 type ContactFormField = {
@@ -14,12 +13,9 @@ type CopyData = {
   linkHome: string;
   linkTutorials: string;
   linkContact: string;
-  linkProjects: string;
-  linkAbout: string;
 
   heroTitle: string;
   heroDescription: string[];
-  homeButtonAbout: string;
 
   aboutTitle: string;
   aboutDescription: string[];
@@ -40,24 +36,18 @@ type Copy = {
   en: CopyData;
 };
 
-const aboutDescription = generateLorem(5, 180);
-const heroDescription = generateLorem(3, 120);
-
 const copyData: Copy = {
   en: {
     linkHome: 'Home',
-    linkAbout: 'About',
     linkContact: 'Contact',
     linkTutorials: 'Tutorials',
-    linkProjects: 'Projects',
-    heroTitle: 'A hero text with exactly seven words',
+    heroTitle: 'Welcome to GAT Academy',
     heroDescription: [
-      'Meet your web development hero - a fullstack TypeScript developer who can create stunning web apps with beautiful animations and powerful business databases.',
-      "With expertise in front-end and back-end development, this hero is equipped to take your project from conception to completion, ensuring a seamless user experience and exceptional functionality. Let's create something amazing together.",
+      'Here you will find usage guide, security tips and news about the infosec world.',
+      'If you have any questions or comments, get in touch with us. Your insights will be much appreciated!',
     ],
-    homeButtonAbout: 'About me',
     aboutTitle: 'Hello there!',
-    aboutDescription,
+    aboutDescription: [''],
     contactTitle: 'What is your dream project?',
     contactDescription:
       "I love hearing about people's dreams and provide services to make them come true. Let's get in touch and see how I can help fulfill your goals :)",
@@ -81,7 +71,7 @@ const copyData: Copy = {
     contactMessage: {
       label: 'Message',
       message: {
-        required: 'Please, send a message',
+        required: 'Please, write a message',
       },
     },
     contactTelephone: {
@@ -91,15 +81,15 @@ const copyData: Copy = {
   },
   pt: {
     linkHome: 'Início',
-    linkAbout: 'Sobre',
     linkTutorials: 'Tutoriais',
     linkContact: 'Contato',
-    linkProjects: 'Projetos',
-    heroTitle: 'Um subtitulo com exatamente seis palavras',
-    heroDescription,
-    homeButtonAbout: 'Sobre Mim',
+    heroTitle: 'Bem vindo à Academia do GAT',
+    heroDescription: [
+      'Aqui você encontrará guias de uso, tutoriais, dicas de segurança e notícias do mundo infosec',
+      'Se tiver qualquer dúvida ou comentários, entre em contato conosco, sua opinião é muito importante para nós',
+    ],
     aboutTitle: 'Olá!',
-    aboutDescription,
+    aboutDescription: [''],
     contactTitle: 'Qual é o projeto dos seus sonhos?',
     contactDescription:
       'Adoro ouvir o sonho das pessoas e prover serviços que possam ajudar a realizá-los',
@@ -123,7 +113,7 @@ const copyData: Copy = {
     contactMessage: {
       label: 'Mensagem',
       message: {
-        required: 'Por favor, insira uma mensagem',
+        required: 'Por favor, escreva uma mensagem',
       },
     },
     contactTelephone: {
