@@ -12,7 +12,7 @@ type ContactFormField = {
 
 type CopyData = {
   linkHome: string;
-  linkBlog: string;
+  linkTutorials: string;
   linkContact: string;
   linkProjects: string;
   linkAbout: string;
@@ -47,8 +47,8 @@ const copyData: Copy = {
   en: {
     linkHome: 'Home',
     linkAbout: 'About',
-    linkBlog: 'Blog',
     linkContact: 'Contact',
+    linkTutorials: 'Tutorials',
     linkProjects: 'Projects',
     heroTitle: 'A hero text with exactly seven words',
     heroDescription: [
@@ -92,7 +92,7 @@ const copyData: Copy = {
   pt: {
     linkHome: 'Início',
     linkAbout: 'Sobre',
-    linkBlog: 'Blog',
+    linkTutorials: 'Tutoriais',
     linkContact: 'Contato',
     linkProjects: 'Projetos',
     heroTitle: 'Um subtitulo com exatamente seis palavras',

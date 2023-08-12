@@ -7,25 +7,23 @@ export function PageLinks(): JSX.Element {
 
   return (
     <ul>
-      {pageRoutes
-        .filter((route) => route.path !== '/tests')
-        .map(
-          (route) =>
-            !route.disabled && (
-              <li key={route.path}>
-                <Link
-                  to={route.path}
-                  className={
-                    route.path === location.pathname
-                      ? 'selected-route'
-                      : undefined
-                  }
-                >
-                  {route.label}
-                </Link>
-              </li>
-            ),
-        )}
+      {pageRoutes.map(
+        (route) =>
+          !route.disabled && (
+            <li key={route.path}>
+              <Link
+                to={route.path}
+                className={
+                  route.path === location.pathname
+                    ? 'selected-route'
+                    : undefined
+                }
+              >
+                {route.label}
+              </Link>
+            </li>
+          ),
+      )}
     </ul>
   );
 }

@@ -1,14 +1,3 @@
-/**
- * receita:
- *
- * dois quadrantes:
- *  esquerdo: um hero text grandão
- *  direito: texto mais explicativo + 1 ou 2 action buttons
-
-   canto direito (absolute) :
-    stick man walking (perna preta e perna cinza em rotação)
- *
- */
 import useCopy from 'src/state/copy';
 import { Link } from 'react-router-dom';
 import { customStyled } from 'src/assets/utils/stitches';

@@ -1,15 +1,8 @@
-/**
- * criar pagina de erro de rota
- */
 import useCopy from 'src/state/copy';
-import { isLocalHost } from 'src/assets/utils';
 import { RouteObject } from 'react-router-dom';
 import Home from './Home';
-import Blog from './Blog';
-import Projects from './Projects';
-import About from './About';
 import Contact from './Contact';
-import { Tests } from './Tests';
+import { Tutorials } from './Tutorials';
 
 const usePageRoutes = () => {
   const copy = useCopy();
@@ -25,34 +18,16 @@ const usePageRoutes = () => {
       label: copy.linkHome,
     },
     {
-      path: '/about',
-      element: <About />,
+      path: '/tutoriais',
+      element: <Tutorials />,
       disabled: false,
-      label: copy.linkAbout,
-    },
-    {
-      path: '/projects',
-      element: <Projects />,
-      disabled: false,
-      label: copy.linkProjects,
+      label: copy.linkTutorials,
     },
     {
       path: '/contact',
       element: <Contact />,
       disabled: false,
       label: copy.linkContact,
-    },
-    {
-      path: '/blog/:article?',
-      element: <Blog />,
-      disabled: false,
-      label: copy.linkBlog,
-    },
-    {
-      path: '/tests',
-      element: <Tests />,
-      disabled: !isLocalHost(),
-      label: 'Tests',
     },
   ];
 

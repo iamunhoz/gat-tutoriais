@@ -12,9 +12,7 @@ const StyledFooter = customStyled('footer', {
 export default function Footer(): JSX.Element {
   return (
     <StyledFooter>
-      <span>
-        Developed with: React - Typescript - Vite - Stitches - Jotai - Radix-UI
-      </span>
+      <span>GAT Infosec</span>
       <SecretsToggler />
     </StyledFooter>
   );

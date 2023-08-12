@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom';
 import * as Popover from '@radix-ui/react-popover';
-import { GitHub, Menu } from 'react-feather';
+import { Menu } from 'react-feather';
 import { LanguageToggler } from './LanguageToggler';
 import { ThemeToggler } from './ThemeToggler';
 
@@ -9,13 +8,6 @@ function SettingsBar(): JSX.Element {
     <>
       <LanguageToggler />
       <ThemeToggler />
-      <Link
-        to="https://github.com/iamunhoz"
-        target="_blank"
-        className="github-link"
-      >
-        <GitHub />
-      </Link>
     </>
   );
 }
