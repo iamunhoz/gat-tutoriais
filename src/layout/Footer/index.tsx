@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { customStyled } from 'src/assets/utils/stitches';
 import { SecretsToggler } from 'src/components/Settings/SecretsToggler';
 
@@ -19,7 +20,7 @@ export default function Footer(): JSX.Element {
   return (
     <StyledFooter>
       <img src="/src/favicon.svg" alt="gat-logo" />
-      <span>GAT Infosec</span>
+      <Link to="https://www.gatinfosec.com">GAT Infosec</Link>
       <SecretsToggler />
     </StyledFooter>
   );

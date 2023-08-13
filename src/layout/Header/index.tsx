@@ -16,6 +16,8 @@ const StyledHeader = customStyled('header', {
 
   '.selected-route': {
     position: 'relative',
+    color: 'var(--accent-color)',
+
     '&:after': {
       content: '',
       position: 'absolute',
@@ -23,6 +25,7 @@ const StyledHeader = customStyled('header', {
       left: 7,
       width: '50%',
       height: '1px',
+      backgroundColor: 'var(--accent-color) !important',
     },
   },
 

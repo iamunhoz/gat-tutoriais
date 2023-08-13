@@ -21,13 +21,13 @@ const StylesContainer = styled('div', {
     },
     theme: {
       light: {
-        '*': {
+        '*:not(.external-link)': {
           backgroundColor: '#FFF',
           color: '#000',
         },
       },
       dark: {
-        '*': {
+        '*:not(.external-link)': {
           backgroundColor: '#000',
           color: '#FFF',
         },

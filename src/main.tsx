@@ -8,7 +8,7 @@ import { postVisitation } from './assets/utils/metrics';
 
 const globalStyles = globalCss({
   ':root': {
-    '--accent-color': 'rgb(255, 123, 0)',
+    '--accent-color': '#f32735',
   },
   '*, *:after, *:before': {
     fontFamily: 'Poppins, sans-serif !important',
