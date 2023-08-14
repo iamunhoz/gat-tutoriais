@@ -9,6 +9,9 @@ import { postVisitation } from './assets/utils/metrics';
 const globalStyles = globalCss({
   ':root': {
     '--accent-color': '#f32735',
+    '--dark-color-shallow': 'rgb(42,42,42)',
+    '--dark-color-deep': 'rgb(29,29,29)',
+    '--light-color': 'rgb(219,219,219)',
   },
   '*, *:after, *:before': {
     fontFamily: 'Poppins, sans-serif !important',
@@ -18,7 +21,11 @@ const globalStyles = globalCss({
     textDecoration: 'none',
   },
   '.dark-mode': {
-    backgroundColor: '#000',
+    backgroundColor: 'var(--dark-color-shallow)',
+    color: 'var(--light-color)',
+  },
+  '.light-mode': {
+    backgroundColor: 'var(--light-color)',
   },
 });
 

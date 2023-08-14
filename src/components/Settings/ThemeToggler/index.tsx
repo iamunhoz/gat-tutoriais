@@ -30,10 +30,10 @@ export function ThemeToggler(): JSX.Element {
 
   const handleThemeChange = () => {
     if (theme === ETheme.light) {
-      document.body.classList.add('dark-mode');
+      document.body.classList.replace('light-mode', 'dark-mode');
       setTheme(ETheme.dark);
     } else {
-      document.body.classList.remove('dark-mode');
+      document.body.classList.replace('dark-mode', 'light-mode');
       setTheme(ETheme.light);
     }
   };
