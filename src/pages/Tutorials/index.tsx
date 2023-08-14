@@ -27,7 +27,7 @@ const TutorialContainer = customStyled('div', {
 
   '.post-title': {
     margin: '10px 0',
-    fontSize: '2rem',
+    fontSize: '2.2rem',
   },
 
   '.screenshot': {

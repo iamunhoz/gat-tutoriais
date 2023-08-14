@@ -40,7 +40,7 @@ const copyData: Copy = {
   en: {
     linkHome: 'Home',
     linkContact: 'Contact',
-    linkTutorials: 'Tutorials',
+    linkTutorials: 'Guides',
     heroTitle: 'Welcome to GAT Academy',
     heroDescription: [
       'Here you will find usage guide, security tips and news about the infosec world.',
@@ -48,10 +48,10 @@ const copyData: Copy = {
     ],
     aboutTitle: 'Hello there!',
     aboutDescription: [''],
-    contactTitle: 'What is your dream project?',
+    contactTitle: 'Get in touch with us!',
     contactDescription:
-      "I love hearing about people's dreams and provide services to make them come true. Let's get in touch and see how I can help fulfill your goals :)",
-    contactEmailTitle: 'Email me directly',
+      'If you got any questions, suggestions or questions, feel free to send us a message',
+    contactEmailTitle: 'E-mail us directly',
     contactFirstName: {
       label: 'First Name',
       message: {
@@ -62,7 +62,7 @@ const copyData: Copy = {
       label: 'Last Name',
     },
     contactEmail: {
-      label: 'Email',
+      label: 'E-mail',
       message: {
         required: 'Please, inform your e-mail',
         mismatch: 'Please, inform a valid e-mail address',
@@ -90,10 +90,10 @@ const copyData: Copy = {
     ],
     aboutTitle: 'Olá!',
     aboutDescription: [''],
-    contactTitle: 'Qual é o projeto dos seus sonhos?',
+    contactTitle: 'Mande um oi pra nós!',
     contactDescription:
-      'Adoro ouvir o sonho das pessoas e prover serviços que possam ajudar a realizá-los',
-    contactEmailTitle: 'Entre em contato comigo diretamente',
+      'Se tiver alguma dúvida, sugestão ou reclamação, fique à vontade para nos mandar uma mensagem!',
+    contactEmailTitle: 'Entre em contato conosco diretamente',
     contactFirstName: {
       label: 'Nome',
       message: {
@@ -104,7 +104,7 @@ const copyData: Copy = {
       label: 'Sobrenome',
     },
     contactEmail: {
-      label: 'Email',
+      label: 'E-mail',
       message: {
         required: 'Por favor, informe seu e-mail',
         mismatch: 'Por favor, informe um e-mail válido',

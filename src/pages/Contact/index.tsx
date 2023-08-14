@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import useCopy from 'src/state/copy';
 import { customStyled } from 'src/assets/utils/stitches';
 import { ArrowUpRight } from 'react-feather';
+import { useAtomValue } from 'jotai';
+import { siteLanguageAtom } from 'src/state';
 import { ContactForm } from './ContactForm';
 
 const ContactPageStyle = customStyled('article', {
@@ -71,10 +73,15 @@ const ContactPageStyle = customStyled('article', {
       },
     },
   },
+
+  '.contact-form-container': {
+    flex: 1,
+  },
 });
 
 export default function Contact(): JSX.Element {
   const { contactTitle, contactDescription, contactEmailTitle } = useCopy();
+  const siteLanguage = useAtomValue(siteLanguageAtom);
 
   return (
     <ContactPageStyle>
@@ -85,27 +92,32 @@ export default function Contact(): JSX.Element {
           <div className="contact-links">
             <ul>
               <li>
-                <Link to="#">
-                  Github
+                <Link to="https://www.gatinfosec.com" target="_blank">
+                  GAT Infosec
                   <ArrowUpRight />
                 </Link>
               </li>
               <li>
-                <Link to="#">
-                  Linkedin
+                <Link to="https://www.securityscore.com.br" target="_blank">
+                  Security Score
                   <ArrowUpRight />
                 </Link>
               </li>
               <li>
-                <Link to="#">
-                  Facebook
+                <Link to="https://www.youtube.com/c/GATInfoSec">
+                  {siteLanguage === 'pt'
+                    ? 'Nossa pagina no youtube'
+                    : 'Our youtube page'}
+                  :
                   <ArrowUpRight />
                 </Link>
               </li>
             </ul>
             <div className="contact-email">
               <p>{contactEmailTitle}</p>
-              <Link to="mailto:iamunhoz@gmail.com">iamunhoz@gmail.com</Link>
+              <Link to="mailto:contato@gatinfosec.com">
+                contato@gatinfosec.com
+              </Link>
             </div>
           </div>
         </section>
