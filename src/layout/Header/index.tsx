@@ -1,9 +1,10 @@
 import { useAtom } from 'jotai';
-import { themeAtom } from 'src/state';
+import { ETheme, themeAtom } from 'src/state';
 import { PageLinks } from 'src/components/PageLinks';
 import { customStyled } from 'src/assets/utils/stitches';
 import { Settings } from 'src/components/Settings';
-import GatLogo from 'src/favicon.svg';
+import GatLogoPositivo from 'src/assets/images/logo-gat-padrao-positivo.png';
+import GatLogoNegativo from 'src/assets/images/logo-gat-padrao-negativo.png';
 
 const StyledHeader = customStyled('header', {
   display: 'flex',
@@ -16,8 +17,8 @@ const StyledHeader = customStyled('header', {
     padding: '5px',
 
     img: {
-      width: 50,
-      height: 50,
+      width: 45,
+      height: 40,
     },
 
     h2: {
@@ -138,7 +139,10 @@ export default function Header(): JSX.Element {
   return (
     <StyledHeader theme={theme}>
       <div className="left-side">
-        <img src={GatLogo} alt="gat-logo" />
+        <img
+          src={theme === ETheme.light ? GatLogoPositivo : GatLogoNegativo}
+          alt="gat-logo"
+        />
         <h2>GAT ACADEMY</h2>
         <nav>
           <PageLinks />

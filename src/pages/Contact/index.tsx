@@ -104,11 +104,10 @@ export default function Contact(): JSX.Element {
                 </Link>
               </li>
               <li>
-                <Link to="https://www.youtube.com/c/GATInfoSec">
+                <Link to="https://support.gatinfosec.com/hc" target="_blank">
                   {siteLanguage === 'pt'
-                    ? 'Nossa pagina no youtube'
-                    : 'Our youtube page'}
-                  :
+                    ? 'Central de Suporte'
+                    : 'Support Center'}
                   <ArrowUpRight />
                 </Link>
               </li>

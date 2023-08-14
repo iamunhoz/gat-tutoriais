@@ -14,7 +14,7 @@ const globalStyles = globalCss({
     '--light-color': 'rgb(219,219,219)',
   },
   '*, *:after, *:before': {
-    fontFamily: 'Poppins, sans-serif !important',
+    fontFamily: 'Saira, sans-serif !important',
     margin: 0,
     padding: 0,
     boxSizing: 'border-box',
