@@ -167,7 +167,7 @@ export function Tutorials(): JSX.Element {
                  (Nome, Sobrenome, E-mail corporativo, Cargo e Nome da empresa)\
                   e o campo opcional Telefone, caso desejar:'
                 : 'On the next page, fill in the 5 mandatory fields\
-                 (Nome, Sobrenome, E-mail corporativo, Cargo e Nome da empresa\
+                 (Nome, Sobrenome, E-mail corporativo, Cargo e Nome da empresa)\
                   and the optional field Telefone, if you wish:'}
             </p>
             <img
