@@ -3,20 +3,32 @@ import { themeAtom } from 'src/state';
 import { PageLinks } from 'src/components/PageLinks';
 import { customStyled } from 'src/assets/utils/stitches';
 import { Settings } from 'src/components/Settings';
+import GatLogo from 'src/favicon.svg';
 
 const StyledHeader = customStyled('header', {
   display: 'flex',
   justifyContent: 'space-between',
 
-  nav: {
+  'nav, .left-side': {
     display: 'flex',
     justifyContent: 'space-between',
+    alignItems: 'center',
     padding: '5px',
+
+    img: {
+      width: 50,
+      height: 50,
+    },
+
+    h2: {
+      marginRight: 10,
+      color: 'var(--accent-color)',
+    },
   },
 
   '.selected-route': {
     position: 'relative',
-    color: 'var(--accent-color)',
+    color: 'var(--accent-color) !important',
 
     '&:after': {
       content: '',
@@ -125,9 +137,13 @@ export default function Header(): JSX.Element {
 
   return (
     <StyledHeader theme={theme}>
-      <nav>
-        <PageLinks />
-      </nav>
+      <div className="left-side">
+        <img src={GatLogo} alt="gat-logo" />
+        <h2>GAT ACADEMY</h2>
+        <nav>
+          <PageLinks />
+        </nav>
+      </div>
       <Settings />
     </StyledHeader>
   );
