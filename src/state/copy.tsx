@@ -90,7 +90,7 @@ const copyData: Copy = {
     ],
     aboutTitle: 'Olá!',
     aboutDescription: [''],
-    contactTitle: 'Mande um oi pra nós!',
+    contactTitle: 'Mande um oi para nós!',
     contactDescription:
       'Se tiver alguma dúvida, sugestão ou reclamação, fique à vontade para nos mandar uma mensagem!',
     contactEmailTitle: 'Entre em contato conosco diretamente',
