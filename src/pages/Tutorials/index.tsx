@@ -138,6 +138,20 @@ export function Tutorials(): JSX.Element {
             ? 'Passos para criar uma conta no GAT security Score'
             : 'Steps to create a new account for GAT Security Score'}
         </h3>
+        <div className="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src={
+              language === 'pt'
+                ? 'https://www.youtube.com/embed/n0-FsQ5Kqp4'
+                : 'https://www.youtube.com/embed/Lgc8tnsrjQs'
+            }
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
         <ul className="signup-steps">
           <li>
             <p>
