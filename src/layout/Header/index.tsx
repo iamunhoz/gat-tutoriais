@@ -24,6 +24,12 @@ const StyledHeader = customStyled('header', {
     h2: {
       marginRight: 10,
       color: 'var(--accent-color)',
+
+      display: 'none',
+
+      '@lg': {
+        display: 'block',
+      },
     },
   },
 
