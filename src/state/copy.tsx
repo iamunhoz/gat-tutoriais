@@ -1,5 +1,6 @@
 import { useAtomValue } from 'jotai';
 import { siteLanguageAtom } from '.';
+import { Link } from 'react-router-dom';
 
 type ContactFormField = {
   label: string;
@@ -12,10 +13,11 @@ type ContactFormField = {
 type CopyData = {
   linkHome: string;
   linkTutorials: string;
+  linkCertification: string;
   linkContact: string;
 
   heroTitle: string;
-  heroDescription: string[];
+  heroDescription: (string | JSX.Element)[];
 
   aboutTitle: string;
   aboutDescription: string[];
@@ -41,6 +43,7 @@ const copyData: Copy = {
     linkHome: 'Home',
     linkContact: 'Contact',
     linkTutorials: 'Guides',
+    linkCertification: 'Certification',
     heroTitle: 'Welcome to GAT Academy',
     heroDescription: [
       'Here you will find usage guide, security tips and news about the infosec world.',
@@ -83,9 +86,21 @@ const copyData: Copy = {
     linkHome: 'Início',
     linkTutorials: 'Tutoriais',
     linkContact: 'Contato',
-    heroTitle: 'Bem vindo à Academia do GAT',
+    linkCertification: 'Certificação',
+    heroTitle: 'Bem vindo ao GAT Academy',
     heroDescription: [
-      'Aqui você encontrará guias de uso, tutoriais, dicas de segurança e notícias do mundo infosec',
+      <>
+        <span>
+          Aprenda sobre pontos específicos das soluções da GAT InfoSec com os nossos
+        </span>
+        <Link to="tutoriais">tutoriais</Link>
+      </>,
+      <>
+        <span>
+          Se quiser expandir suas qualificações em SI, conheça nosso 
+        </span>
+        <Link to="tutoriais">Programa de Certificação</Link>
+      </>,
       'Se tiver qualquer dúvida ou comentários, entre em contato conosco, sua opinião é muito importante para nós',
     ],
     aboutTitle: 'Olá!',

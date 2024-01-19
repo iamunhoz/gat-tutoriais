@@ -38,17 +38,20 @@ const StylesContainer = styled('div', {
   // container styles
   display: 'flex',
   flexDirection: 'column',
-  maxWidth: 1000,
+  // maxWidth: 1000,
   margin: '0 auto',
-  minHeight: '100vh',
+  minHeight: '100svh',
 
   // children styles
   main: {
     width: '100%',
+    // border: '3px solid lightblue',
+    // maxWidth: 1000,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     flexGrow: 1,
+    margin: '0 auto',
 
     h1: {
       fontSize: 48,

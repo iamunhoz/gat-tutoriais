@@ -37,6 +37,7 @@ const HomePageStyle = customStyled('div', {
     textDecoration: 'none',
     padding: '5px 10px',
     borderRadius: '10px',
+    color: 'limegreen !important' //override theme
   },
 });
 
@@ -50,7 +51,7 @@ export default function Home(): JSX.Element {
       <section className="hero-description">
         <div>
           {heroDescription.map((sentence) => (
-            <p key={sentence.substring(0, 5)}>{sentence}</p>
+            <p key={sentence.toString().substring(0, 5)}>{sentence}</p>
           ))}
         </div>
       </section>

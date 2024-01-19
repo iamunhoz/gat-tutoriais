@@ -9,7 +9,7 @@ export function PageLinks(): JSX.Element {
     <ul>
       {pageRoutes.map(
         (route) =>
-          !route.disabled && (
+          !route.disabled && route.path !== "/" && (
             <li key={route.path}>
               <Link
                 to={route.path}
