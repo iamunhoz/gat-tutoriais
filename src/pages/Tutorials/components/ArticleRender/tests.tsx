@@ -69,3 +69,5 @@ export default async function ArticleRender() {
     </ArticleStyleContainer>
   );
 } */
+
+export {}
